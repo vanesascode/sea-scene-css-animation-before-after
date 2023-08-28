@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* VIDEO */
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.sun-position {
+  padding-top: 50%;
+  padding-left: 43%;
+}
+
+/* SUN */
+
+.sun {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #df7606;
+  animation: pulsate 2s ease-in-out infinite;
+  z-index: 2;
+}
+
+.sun::before,
+.sun::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  animation: pulsate 5s ease-in-out infinite;
+  z-index: 2;
+}
+
+.sun::before {
+  animation-delay: 0.5s;
+  width: 150%;
+  height: 150%;
+  top: -25%;
+  left: -25%;
+  background-color: #f3f1f0;
+  opacity: 0.8;
+}
+
+.sun::after {
+  animation-delay: 1s;
+  width: 125%;
+  height: 125%;
+  top: -12%;
+  left: -12%;
+  background-color: #d7bb32;
+  opacity: 0.2;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* SHIP1 */
+
+.ship2 {
+  position: absolute;
+  top: 60%;
+  right: 10px;
+  z-index: 1;
+  animation: ship-left 5s alternate infinite;
+}
+
+.ship3 {
+  position: absolute;
+  top: 50%;
+  right: 60%;
+  z-index: 1;
+  animation: ship-right 5s alternate infinite;
+}
+
+.ship4 {
+  position: absolute;
+  top: 80%;
+  right: 50%;
+  z-index: 1;
+  animation: ship-left 5s alternate infinite;
+}
+@keyframes ship-left {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-20%);
+  }
+}
+
+@keyframes ship-right {
+  0% {
+    transform: translate(-20%);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
