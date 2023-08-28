@@ -21,16 +21,16 @@ body {
 }
 
 .sun-position {
-  padding-top: 50%;
-  padding-left: 43%;
+  padding-top: 45%;
+  padding-left: 38%;
 }
 
 /* SUN */
 
 .sun {
   position: relative;
-  width: 25px;
-  height: 25px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   background-color: #df7606;
   animation: pulsate 2s ease-in-out infinite;
@@ -82,7 +82,7 @@ body {
 
 .ship2 {
   position: absolute;
-  top: 60%;
+  top: 50%;
   right: 10px;
   z-index: 1;
   animation: ship-left 5s alternate infinite;
@@ -90,8 +90,8 @@ body {
 
 .ship3 {
   position: absolute;
-  top: 50%;
-  right: 60%;
+  top: 45%;
+  right: 70%;
   z-index: 1;
   animation: ship-right 5s alternate infinite;
 }
