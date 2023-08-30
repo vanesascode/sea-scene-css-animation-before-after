@@ -124,12 +124,20 @@ body {
   animation: ship-left 5s alternate infinite;
 }
 
+.ship2:hover {
+  animation-play-state: paused;
+}
+
 .ship3 {
   position: absolute;
   top: 45%;
   right: 70%;
   z-index: 1;
   animation: ship-right 5s alternate infinite;
+}
+
+.ship3:hover {
+  animation-play-state: paused;
 }
 
 .ship4 {
@@ -139,6 +147,11 @@ body {
   z-index: 1;
   animation: ship-left 5s alternate infinite;
 }
+
+.ship4:hover {
+  animation-play-state: paused;
+}
+
 @keyframes ship-left {
   0% {
     transform: translate(0);
@@ -156,5 +169,22 @@ body {
 
   100% {
     transform: translate(0);
+  }
+}
+
+/**/
+
+@keyframes myAnimation {
+  0% {
+    background-color: red;
+    transform: translateX(0);
+  }
+  50% {
+    background-color: blue;
+    transform: translateX(200px);
+  }
+  100% {
+    background-color: green;
+    transform: translateX(0);
   }
 }
